@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Booking</title>
+</head>
+<body>
+    <h1>Appointment Booking Form</h1>
+    <form onsubmit="return printSummary()">
+        <label for="name">Patient Name:</label>
+        <input type="text" id="name" required><br>
+        
+        <label for="id">ID #:</label>
+        <input type="text" id="id" required><br><br>
+        
+        <label for="service">Service:</label>
+        <select id="service">
+            <option value="Dental Check-up">Dental Check-up (PHP 850)</option>
+            <option value="Eye Check-up">Eye Check-up (PHP 900)</option>
+            <option value="Physical Exam">Physical Exam (PHP 800)</option>
+        </select><br>
+        
+        <label for="sessions">Sessions (Max of 3):</label>
+        <input type="number" id="sessions" min="1" max="3" required><br><br>
+        
+        <label for="custType">Customer type:</label>
+        <select id="custType">
+            <option value="Regular">Regular</option>
+            <option value="PWD/Senior">PWD/Senior</option>
+        </select><br><br>
+        
+        <input type="submit" value="Book Appointment">
+    </form>
+    <div id="summary"></div>
+    <script src="script.js"></script>
+</body>
+</html>
